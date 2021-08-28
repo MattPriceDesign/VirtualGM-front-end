@@ -47,7 +47,7 @@ const app = Vue.createApp({
 
         const picker = new Litepicker({ 
             element: document.getElementById('picker'),
-            singleMode: false,
+            singleMode: true,
             format: 'MMMM D, YYYY',
               firstDay: 0
           });
