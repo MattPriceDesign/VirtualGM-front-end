@@ -45,6 +45,12 @@ const app = Vue.createApp({
         // Gets window size to check what navigation bar style use.
         this.resizeEventHandler();
 
+        const picker = new Litepicker({ 
+            element: document.getElementById('picker'),
+            singleMode: false,
+            format: 'MMMM D, YYYY',
+              firstDay: 0
+          });
 
         // //start of DATE PICKER JS
         // //FOR 'SINGLE' DATE PICKER ON ONE FORM/PAGE. REMOVE CODE BELOW IF NOT NEEDED
