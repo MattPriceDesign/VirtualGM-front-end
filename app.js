@@ -9,6 +9,23 @@ const app = Vue.createApp({
             //search
             isNewSearch: true,
             pillState: true,
+            searchFilterMenu: false,
+            //Filter pills status
+            filterPerformanceIndicators: false,
+            filterInsights: false,
+            filterTasks: false,
+            filterMessages: false,
+            filterPeople: false,
+            filterTime: false,
+            filterSpecificPerson: false,
+            testinglinks: false,
+            timeFilterLength: "",
+            specificPersonName: "",
+            //filter menus
+            selectFilterPeople: false,
+            selectFilterDate: false,
+            selectFilterItemType: false,
+
 
             // modal base
             isModalOpen: false,
@@ -41,41 +58,26 @@ const app = Vue.createApp({
         window.removeEventListener("resize", this.resizeEventHandler);
     },
     mounted() { 
-        
+
         // Gets window size to check what navigation bar style use.
         this.resizeEventHandler();
 
-        const picker = new Litepicker({ 
+        // uncomment this in the home page
+        // const picker = new Litepicker({ 
+        //     element: document.getElementById('picker'),
+        //     singleMode: true,
+        //     format: 'MMMM D, YYYY',
+        //       firstDay: 0
+        // });
+
+        // uncomment this in the searc page
+          const picker = new Litepicker({ 
             element: document.getElementById('picker'),
-            singleMode: true,
+            singleMode: false,
             format: 'MMMM D, YYYY',
               firstDay: 0
-          });
+        });
 
-        // //start of DATE PICKER JS
-        // //FOR 'SINGLE' DATE PICKER ON ONE FORM/PAGE. REMOVE CODE BELOW IF NOT NEEDED
-        // var picker = new Pikaday({ 
-        //     field: document.getElementById('datepicker'),
-        //     disableWeekends: true, // Disables option to select weekend days
-        //     firstDay: 0, // First day of the week - 0 for Sunday & 1 for Monday
-        //     minDate: new Date(), // Disables option to select days prior to current day
-        //     //yearRange: [1968, new Date().getFullYear().toString()], //Here you can choose the earliest year option to the current date or change "new Date().getFullYear().toString()" to 2008 for example.  
-        // });
-        // //Sets Default Date to Current Date
-        // picker.gotoToday()
-        // //<!-- FOR 'MULTIPLE' DATE PICKERS ON ONE FORM/PAGE. REMOVE CODE BELOW IF NOT NEEDED! -->
-        // $('.date-picker').each(function() {  // ".date-picker" is the class name you would set on each field that needs a date picker.
-        //     $(this).data('pikaday', new Pikaday({ 
-        //         field: $(this)[0],
-        //         disableWeekends: false, // Disables option to select weekend days
-        //         firstDay: 5, // First day of the week - 0 for Sunday & 1 for Monday
-        //         // minDate: new Date(), // Disables option to select days prior to current day
-        //         //yearRange: [1968, new Date().getFullYear().toString()], //Here you can choose the earliest year option to the current date or change "new Date().getFullYear().toString()" to 2008 for example.  
-        //     }));
-        // });
-        // //Sets Default Date to Current Date
-        // picker.gotoToday()
-        // //end of DATE PICKER JS
     },
     methods: {
         // nav bar
@@ -104,6 +106,47 @@ const app = Vue.createApp({
         pillToggle() {
             this.pillState = !this.pillState
         },
+        resetPills() {
+            this.filterPerformanceIndicators = false
+            this.filterInsights = false
+            this.filterTasks = false
+            this.filterMessages = false
+            this.filterPeople = false
+            this.filterTime = false
+            this.filterSpecificPerson = fals
+            this.timeFilterLength = ""
+            this.specificPersonName = ""
+            
+        },
+        searchFilterMenuButton() {
+            if(this.searchFilterMenu = false) {
+                // this.searchFilterMenu = true
+                console.log("if fired")
+            } else if (this.searchFilterMenu = true) {
+                // this.searchFilterMenu = !this.searchFilterMenu
+                // this.selectFilterDate = false
+                // this.selectFilterItemType = false
+                console.log("else fired")
+            }
+        },
+        showAllPills() {
+            this.filterPerformanceIndicators = true
+            this.filterInsights = true
+            this.filterTasks = true
+            this.filterMessages = true
+            this.filterPeople = true
+            this.filterTime = true
+            // this.filterSpecificPerson = true
+            // this.selectFilterDate = true
+            this.timeFilterLength = ""
+            this.specificPersonName = ""
+            
+        },
+        methodtest() {
+            console.log("testing meghods")
+            this.testinglinks = true
+            window.location.href =  '/search-page.html'
+        },
 
 
         //modal
@@ -123,8 +166,17 @@ const app = Vue.createApp({
             this.dropDownInventoryByBranchItem1 = false
             this.dropDownSalesByRouteItem1 = false
         },
+
+        handleClick() {
+            console.log(this.$refs.pagetitle)
+            this.$refs.searchbar.focus()
+        }
     }
 })
 app.mount('#app')
 
 
+// { pion: filterPerformanceIndicators, 'ion': filterInsights, 'ton': filterTasks, 'mon': filterMessages, 'pon': filterPeople, 'tmon': filterTime}
+
+
+// Add a class for a specific person name
