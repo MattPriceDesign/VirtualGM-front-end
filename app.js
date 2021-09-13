@@ -7,9 +7,10 @@ const app = Vue.createApp({
             OpenLogoutModal: false,
 
             //search
-            isNewSearch: true,
+            isNewSearch: false,
             pillState: true,
-            searchFilterMenu: false,
+            // searchFilterMenu: false,
+
             //Filter pills status
             filterPerformanceIndicators: false,
             filterInsights: false,
@@ -22,6 +23,8 @@ const app = Vue.createApp({
             timeFilterLength: "",
             specificPersonName: "",
             //filter menus
+            searchMenuIsOpen: false,
+            selectIntroMenu: true,
             selectFilterPeople: false,
             selectFilterDate: false,
             selectFilterItemType: false,
@@ -58,7 +61,6 @@ const app = Vue.createApp({
         window.removeEventListener("resize", this.resizeEventHandler);
     },
     mounted() { 
-
         // Gets window size to check what navigation bar style use.
         this.resizeEventHandler();
 
@@ -113,20 +115,18 @@ const app = Vue.createApp({
             this.filterMessages = false
             this.filterPeople = false
             this.filterTime = false
-            this.filterSpecificPerson = fals
+            this.filterSpecificPerson = false
             this.timeFilterLength = ""
             this.specificPersonName = ""
             
         },
         searchFilterMenuButton() {
-            if(this.searchFilterMenu = false) {
-                // this.searchFilterMenu = true
-                console.log("if fired")
-            } else if (this.searchFilterMenu = true) {
-                // this.searchFilterMenu = !this.searchFilterMenu
-                // this.selectFilterDate = false
-                // this.selectFilterItemType = false
-                console.log("else fired")
+            if (this.searchMenuIsOpen == true) {
+                this.searchMenuIsOpen = false
+                this.resetSearchMenu()
+
+            } else if (this.searchMenuIsOpen == false){
+                this.searchMenuIsOpen = true
             }
         },
         showAllPills() {
@@ -140,7 +140,13 @@ const app = Vue.createApp({
             // this.selectFilterDate = true
             this.timeFilterLength = ""
             this.specificPersonName = ""
-            
+        },
+        resetSearchMenu() {
+            this.selectIntroMenu = true
+            this.selectFilterPeople = false
+            this.selectFilterDate = false
+            this.selectFilterItemType = false
+            console.log('resetSearchMenu')
         },
         methodtest() {
             console.log("testing meghods")
