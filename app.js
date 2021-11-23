@@ -7,27 +7,59 @@ const app = Vue.createApp({
             OpenLogoutModal: false,
 
             //search
-            isNewSearch: false,
+            isNewSearch: true,
+            quickSearch: false,
             pillState: true,
-            // searchFilterMenu: false,
-
             //Filter pills status
-            filterPerformanceIndicators: false,
-            filterInsights: false,
-            filterTasks: false,
-            filterMessages: false,
-            filterPeople: false,
-            filterTime: false,
+            filterPerformanceIndicators: true,
+            filterInsights: true,
+            filterTasks: true,
+            filterMessages: true,
+            filterLocation: false,
+            filterItemName: false,
             filterSpecificPerson: false,
-            testinglinks: false,
+            filterAssigned: false,
+            filterAccepted: false,
+            filterCompleted: false,
+            filterRerouted: false,
+            //Pill content
             timeFilterLength: "",
             specificPersonName: "",
             //filter menus
             searchMenuIsOpen: false,
             selectIntroMenu: true,
-            selectFilterPeople: false,
             selectFilterDate: false,
             selectFilterItemType: false,
+            selectFilterStatus: false,
+            //Filter in modals
+            selectFilterPeople: false,
+            selectFilterItemName: false,
+            selectFilterLocation: false,
+            //selection of list item examples
+            //filter Date
+            filterTime7d: false,
+            filterTime30d: false,
+            filterTimeCstm: false,
+            //Rule names
+            listItemFilterItemNameA: false,
+            listItemFilterItemNameB: false,
+            listItemFilterItemNameC: false,
+            listItemFilterItemNameD: false,
+            listItemFilterItemNameE: false,
+            //locations
+            listItemFilterLocationA: false,
+            listItemFilterLocationB: false,
+            listItemFilterLocationC: false,
+            listItemFilterLocationD: false,
+            listItemFilterLocationE: false,
+            //specific people
+            listItemFilterIndividualPersonA: false,
+            listItemFilterIndividualPersonB: false,
+            listItemFilterIndividualPersonC: false,
+            listItemFilterIndividualPersonD: false,
+            listItemFilterIndividualPersonE: false,
+
+
 
 
             // modal base
@@ -50,6 +82,10 @@ const app = Vue.createApp({
             //date selection toggles 
             pillToggleDueDate: false,
             radioToggleUrgent: false,
+
+            //home page
+            TaskOverviewExampleItem: false,
+
         }
     },
     created() {
@@ -71,8 +107,15 @@ const app = Vue.createApp({
         //     format: 'MMMM D, YYYY',
         //       firstDay: 0
         // });
+        //Task overview script
+        var r = document.querySelector(':root');
+        const OverviewListHeight = (document.getElementById("TaskOverviewList").scrollHeight)
+        r.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
 
-        // uncomment this in the searc page
+
+
+
+        // uncomment this in the search page
           const picker = new Litepicker({ 
             element: document.getElementById('picker'),
             singleMode: false,
@@ -114,16 +157,40 @@ const app = Vue.createApp({
             this.filterTasks = false
             this.filterMessages = false
             this.filterPeople = false
-            this.filterTime = false
             this.filterSpecificPerson = false
+            this.filterAccepted = false
+            this.filterCompleted = false
+            this.filterAssigned = false
+            this.filterRerouted = false
             this.timeFilterLength = ""
             this.specificPersonName = ""
-            
+
+            //Rule item names
+            this.listItemFilterItemNameA = false
+            this.listItemFilterItemNameB = false
+            this.listItemFilterItemNameC = false
+            this.listItemFilterItemNameD = false
+            this.listItemFilterItemNameE = false
+            //locations
+            this.listItemFilterLocationA = false
+            this.listItemFilterLocationB = false
+            this.listItemFilterLocationC = false
+            this.listItemFilterLocationD = false
+            this.listItemFilterLocationE = false
+            //specific people
+            this.listItemFilterIndividualPersonA = false
+            this.listItemFilterIndividualPersonB = false
+            this.listItemFilterIndividualPersonC = false
+            this.listItemFilterIndividualPersonD = false
+            this.listItemFilterIndividualPersonE = false
+            //times / dates
+            this.filterTime7d = false
+            this.filterTime30d = false
+            this.filterTimeCstm = false
         },
         searchFilterMenuButton() {
             if (this.searchMenuIsOpen == true) {
-                this.searchMenuIsOpen = false
-                this.resetSearchMenu()
+                this.closeSearchMenu()
 
             } else if (this.searchMenuIsOpen == false){
                 this.searchMenuIsOpen = true
@@ -134,27 +201,29 @@ const app = Vue.createApp({
             this.filterInsights = true
             this.filterTasks = true
             this.filterMessages = true
-            this.filterPeople = true
-            this.filterTime = true
+            // this.filterPeople = true
             // this.filterSpecificPerson = true
             // this.selectFilterDate = true
             this.timeFilterLength = ""
             this.specificPersonName = ""
         },
-        resetSearchMenu() {
+        closeSearchMenu() {
+            this.searchMenuIsOpen = false
             this.selectIntroMenu = true
-            this.selectFilterPeople = false
             this.selectFilterDate = false
             this.selectFilterItemType = false
-            console.log('resetSearchMenu')
+            this.selectFilterStatus = false
         },
         methodtest() {
             console.log("testing meghods")
             this.testinglinks = true
             window.location.href =  '/search-page.html'
         },
-
-
+        selectSuggestedFilter() {
+            this.closeSearchMenu()
+            this.resetPills()
+            this.isNewSearch = false
+        },
         //modal
         closeVueModal() {
             this.isModalOpen = false
@@ -171,6 +240,11 @@ const app = Vue.createApp({
             //Closes expanded drop-down items
             this.dropDownInventoryByBranchItem1 = false
             this.dropDownSalesByRouteItem1 = false
+
+            //search page filter selection modal content
+            this.selectFilterPeople = false
+            this.selectFilterItemName = false
+            this.selectFilterLocation = false
         },
 
         handleClick() {
@@ -181,8 +255,45 @@ const app = Vue.createApp({
 })
 app.mount('#app')
 
+// Delete everything below this line for publication
 
-// { pion: filterPerformanceIndicators, 'ion': filterInsights, 'ton': filterTasks, 'mon': filterMessages, 'pon': filterPeople, 'tmon': filterTime}
+
+// this.timeFilterLength = '30 days', this.filterTime = !this.filterTime, closeSearchMenu(), isNewSearch = false
+// this.timeFilterLength = '7 days', this.filterTime = !this.filterTime, closeSearchMenu(), isNewSearch = false
 
 
-// Add a class for a specific person name
+// filterTimeFunc(), this.timeFilterLength = '7 days', closeSearchMenu(), isNewSearch = false
+// filterTimeFunc(), this.timeFilterLength = '30 days', closeSearchMenu(), isNewSearch = false
+// filterTimeFunc(), this.timeFilterLength = '7 days', closeSearchMenu(), isNewSearch = false
+
+// this.filterTime = !this.filterTime, this.timeFilterLength = '7 days', closeSearchMenu(), isNewSearch = false
+// this.filterTime = !this.filterTime, this.timeFilterLength = '30 days', closeSearchMenu(), isNewSearch = false
+// this.filterTime = !this.filterTime, this.timeFilterLength = '7 days', closeSearchMenu(), isNewSearch = false
+
+// this.filterTime = !this.filterTime, closeSearchMenu(), isNewSearch = false
+
+
+
+
+// // this.listItemFilterLocationA = false, this.listItemFilterLocationB = false, this.listItemFilterLocationC  = false, this.listItemFilterLocationD = false, this.listItemFilterLocationE = false,
+
+// listItemFilterLocationA || listItemFilterLocationB || listItemFilterLocationC || listItemFilterLocationD || listItemFilterLocationE
+// listItemFilterItemNameA || listItemFilterItemNameB || listItemFilterItemNameC  || listItemFilterItemNameD || listItemFilterItemNameE
+
+// !listItemFilterLocationA && !listItemFilterLocationB && !listItemFilterLocationC && !listItemFilterLocationD && !listItemFilterLocationE
+// listItemFilterIndividualPersonA || listItemFilterIndividualPersonB || listItemFilterIndividualPersonC || listItemFilterIndividualPersonD || listItemFilterIndividualPersonE && !filterSpecificPerson
+
+
+// { showing: filterPerformanceIndicators|| filterInsights|| filterTasks|| filterMessages|| filterPeople || filterTime || filterAssigned || filterAccepted || filterCompleted || filterRerouted || filterSpecificPerson || listItemFilterLocationA || listItemFilterLocationB || listItemFilterLocationC || listItemFilterLocationD || listItemFilterLocationE || listItemFilterIndividualPersonA || listItemFilterIndividualPersonB || listItemFilterIndividualPersonC || listItemFilterIndividualPersonD || listItemFilterIndividualPersonE || filterSpecificPerson || listItemFilterItemNameA || listItemFilterItemNameB || listItemFilterItemNameC  || listItemFilterItemNameD || listItemFilterItemNameE
+// }
+
+
+// !filterSpecificPerson && listItemFilterItemNameA || listItemFilterItemNameB || listItemFilterItemNameC  || listItemFilterItemNameD || listItemFilterItemNameE
+
+
+
+// this.listItemFilterIndividualPersonA = false, this.listItemFilterIndividualPersonB = false, this.listItemFilterIndividualPersonC  = false, this.listItemFilterIndividualPersonD = false, this.listItemFilterIndividualPersonE = false
+
+// this.filterTimeCstm = !this.filterTimeCstm, this.filterTime7d = false, this.filterTime30d = false, closeSearchMenu(), isNewSearch = false
+
+// this.filterTime7d = !this.filterTime7d, this.filterTimeCstm = false, this.filterTime30d = false, closeSearchMenu(), isNewSearch = false
