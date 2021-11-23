@@ -85,6 +85,14 @@ const app = Vue.createApp({
 
             //home page
             TaskOverviewExampleItem: false,
+            TaskOverviewMyTasks: false,
+            CategoriesWithNoTasksToggle: false,
+            //task numbers
+            Offline: 8,
+            SalesPerformanceDecline: 4,
+            CashCollectionDiscrepancy: 1,
+            Waste: 1,
+            categoriesWithNoTasks: 12,
 
         }
     },
@@ -108,9 +116,16 @@ const app = Vue.createApp({
         //       firstDay: 0
         // });
         //Task overview script
-        var r = document.querySelector(':root');
-        const OverviewListHeight = (document.getElementById("TaskOverviewList").scrollHeight)
-        r.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
+        const r = document.querySelector(':root');
+        // Task overview list
+        let OverviewListHeight = (document.getElementById("TaskOverviewList").scrollHeight)
+        // r.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
+        document.documentElement.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
+
+        // Inactive categories list
+        let CategoryListHeight = (document.getElementById("TaskCategoryList").scrollHeight)
+        // r.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
+        document.documentElement.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
 
 
 
@@ -125,6 +140,33 @@ const app = Vue.createApp({
 
     },
     methods: {
+        filterMyTasks() {
+            if( this.TaskOverviewMyTasks == false) {
+                this.TaskOverviewMyTasks = true
+                this.Offline = 1
+                this.SalesPerformanceDecline = 2
+                this.CashCollectionDiscrepancy = 0
+                this.Waste = 0
+                this.categoriesWithNoTasks = 14 
+                // update Height of the active tasks list
+                CategoryListHeight = (document.getElementById("TaskCategoryList").scrollHeight)
+                document.documentElement.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
+
+            } else if(this.TaskOverviewMyTasks == true){
+                this.TaskOverviewMyTasks = false
+                this.Offline = 5
+                this.SalesPerformanceDecline = 4
+                this.CashCollectionDiscrepancy = 1
+                this.Waste = 1
+                this.categoriesWithNoTasks = 12 
+                // update Height of the active tasks list
+                CategoryListHeight = (document.getElementById("TaskCategoryList").scrollHeight)
+                document.documentElement.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
+            
+
+            }
+
+        },
         // nav bar
         resizeEventHandler() {
             this.myScreenWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -187,7 +229,7 @@ const app = Vue.createApp({
             this.filterTime7d = false
             this.filterTime30d = false
             this.filterTimeCstm = false
-        },
+                    },
         searchFilterMenuButton() {
             if (this.searchMenuIsOpen == true) {
                 this.closeSearchMenu()
