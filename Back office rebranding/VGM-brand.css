@@ -5,37 +5,31 @@
   --red: #E94770;
   --yellow: #FDD168;
    --offWhite: #F5F5F5;   
-/*   --offWhite: #fbeff4; */
   --white: #fff;
   --dark: #4E4E4E;
   --subdued: #606A85;    
+  
 }
 /* nav bar position */
-.ng-scope {
-  position: sticky;
-  top: 0px;
-  z-index: 9999;
+body > div.container > div > div.ng-scope {
+position: sticky;
+top: 0px;
+z-index: 9999;
+  ;
 }
 /* logo */
 .navbar-header .navbar-brand img {
   opacity: 0
 }
-.navbar-header .navbar-brand {
-  /* background-image: url("https://mattprice.design/documents/VirtualGM-Final-white.png"); */
-  /* background-image: url("images/VirtualGM-Final-white.png"); */
-  background-repeat: no-repeat;
-  background-size: 0px 0px;
-  background-position: center bottom;
-  
-}
 .collapse.navbar-collapse.navbar-right .navbar-brand {
   display: none;
 }
+
 /* fonts */
-/* body {
+body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-} */
+}
 a,
 body,
 .btn-link,
@@ -44,7 +38,7 @@ body,
   color: var(--priBlue);
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-  color: #cacaca;
+  color: #d9d9d9;
 }
 a:hover,
 a:focus,
@@ -118,11 +112,11 @@ table.product-table tbody tr.selected-product {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   color: var(--priBlue);
   background-color: var(--white);
-  border-radius: 4px;
+  border-radius: 4px 4px 0px 0px;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
   background-color: var(--secBlue);
-  border-radius: 4px;
+  border-radius: 4px 4px 0px 0px;
 }
 /* nav bar drop down */
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus,
@@ -130,7 +124,7 @@ table.product-table tbody tr.selected-product {
   color: var(--white);
   background-color: var(--priBlue);
 }
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #cacaca;
   }
@@ -145,7 +139,6 @@ table.product-table tbody tr.selected-product {
     border-radius: 4px 4px 0px 0px;
   }
 }
-
 
 /* Gray background */
 .table > tbody > tr > td:hover,
