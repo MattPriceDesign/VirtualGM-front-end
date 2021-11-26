@@ -73,6 +73,7 @@ const app = Vue.createApp({
             insightContentFiveWeekSalesTrend: false, 
             insightContentFirstDraft: false,
             insightContentTaskCreationFlow: false,
+            taskShortcut: false,
 
 
             //Performance indicators drop down toggle 
@@ -278,6 +279,7 @@ const app = Vue.createApp({
             this.insightContentFiveWeekSalesTrend = false
             this.insightContentFirstDraft = false
             this.insightContentTaskCreationFlow = false
+            this.taskShortcut = false
 
             //Closes expanded drop-down items
             this.dropDownInventoryByBranchItem1 = false

@@ -1,0 +1,209 @@
+:root {
+  --priBlue: #2C4178;
+  --secBlue: #5FB2E4;
+  --green: #4FB794;
+  --red: #E94770;
+  --yellow: #FDD168;
+   --offWhite: #F5F5F5;   
+/*   --offWhite: #fbeff4; */
+  --white: #fff;
+  --dark: #4E4E4E;
+  --subdued: #606A85;    
+}
+/* nav bar position */
+.ng-scope {
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+}
+/* logo */
+.navbar-header .navbar-brand img {
+  opacity: 0
+}
+.navbar-header .navbar-brand {
+  /* background-image: url("https://mattprice.design/documents/VirtualGM-Final-white.png"); */
+  /* background-image: url("images/VirtualGM-Final-white.png"); */
+  background-repeat: no-repeat;
+  background-size: 0px 0px;
+  background-position: center bottom;
+  
+}
+.collapse.navbar-collapse.navbar-right .navbar-brand {
+  display: none;
+}
+/* fonts */
+/* body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+} */
+a,
+body,
+.btn-link,
+.panel-default>.panel-heading,
+.input-group-addon{
+  color: var(--priBlue);
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: #cacaca;
+}
+a:hover,
+a:focus,
+.blue, .btn-link:hover, .btn-link:focus{
+  color: var(--secBlue);
+
+}
+/* page width */
+.container {
+  min-width: 95%;
+  padding: 0;
+}
+
+@media (min-width: 767x) {
+  .container {
+    max-width: 95%;
+    padding: 0;
+  }
+}
+/* forms */
+input {
+  accent-color: var(--secBlue);
+}
+.form-control:focus {
+  border-color: var(--secBlue);
+}
+/* Colo#E94770 elements */
+table.product-table tbody tr.selected-product {
+  background-color: var(--priBlue);
+}
+.table > tbody > tr > td:hover {
+  color: var(--priBlue) 
+}
+
+.navbar-default,
+.btn-primary {
+  background-color: var(--priBlue);
+  border-color: var(--priBlue);
+}
+.btn-default, .btn-success {
+  border: 1px solid var(--priBlue);
+  background-color: var(--white);
+  color: var(--priBlue);
+  margin: 2px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  background-color: #253766;
+  border-color: #253766;
+}
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active {
+  border: 1px solid var(--priBlue);
+  background-color: var(--white);
+  color: var(--priBlue);
+  margin: 2px;
+  opacity: 50%
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default, .btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open>.dropdown-toggle.btn-success.focus, .open>.dropdown-toggle.btn-success:focus, .open>.dropdown-toggle.btn-success:hover, 
+.btn-success:hover, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  border-color: var(--secBlue);
+  background-color: var(--offWhite);
+  color: var(--priBlue);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 8%);
+} 
+.nav>li>a:hover, .nav>li>a:focus {
+  background-color: var(--offWhite);
+  color: var(--priBlue);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 8%);
+}
+/* nav bar selected tab */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: var(--priBlue);
+  background-color: var(--white);
+  border-radius: 4px;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: var(--secBlue);
+  border-radius: 4px;
+}
+/* nav bar drop down */
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus,
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .ui-select-bootstrap .ui-select-choices-row.active>a {
+  color: var(--white);
+  background-color: var(--priBlue);
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #cacaca;
+  }
+}
+/* rounds the corners based off nav bar height (is it wraping?) */
+@media (min-width: 934px) {
+ /* nav bar selected tab */
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    border-radius: 4px 4px 0px 0px;
+  }
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    border-radius: 4px 4px 0px 0px;
+  }
+}
+
+
+/* Gray background */
+.table > tbody > tr > td:hover,
+.table thead tr,
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control,
+button, .btn.btn-default.form-control.ui-select-toggle, .well {
+  background-color: var(--offWhite);
+}
+/* Gray background + border*/
+.panel-default>.panel-heading,
+.input-group-addon{
+  background-color: var(--offWhite);
+  border-color: var(--offWhite);
+}
+/* Gray border */
+.form-control {
+  border-color: #EDEDED;
+}
+
+/* #E94770 */
+.alert-danger, .btn-danger {
+  background-color: var(--red);
+  border-color: var(--red);
+
+}
+
+.panel-heading .glyphicon {
+  border: 1px solid var(--priBlue);
+  border-radius: 2px;
+}
+/* login styles */
+[ng-controller="authController"] .nav.nav-pills{
+  display: none;
+}
+
+@media (max-width: 992px) {
+  [ng-controller="authController"] .col-md-8 {
+    display: none;
+  }
+  [ng-controller="authController"] .navbar-toggle {
+    display: none;
+  }
+  [ng-show="!userInformation.loggedIn"] {
+    display:none; 
+  }
+}
+
+[ng-controller="authController"] .row.ng-scope {
+  margin-top: 12vh;
+}
+@media (min-width: 992px) {
+ [ng-controller="authController"] .row.ng-scope {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+   }
+  .row.ng-scope .col-md-8{
+    display:none;
+  }
+}

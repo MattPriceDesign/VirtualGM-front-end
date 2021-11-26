@@ -1,0 +1,900 @@
+html {
+	overflow: -moz-scrollbars-vertical;
+	overflow: scroll;
+}
+
+.ng-leave {
+	/*
+	-webkit-animation: fadeOutUp 0.1s;
+	-moz-animation: fadeOutUp 0.1s;
+	-ms-animation: fadeOutUp 0.1s;
+	animation: fadeOutUp 0.1s;
+	*/
+}
+
+.ng-enter {
+	/*-webkit-animation: fadeInUp 1s;
+	-moz-animation: fadeInUp 1s;
+	-ms-animation: fadeInUp 1s;
+	animation: fadeInUp 1s;
+	*/
+}
+
+.error {
+	color: #E94770;
+}
+
+.login-error {
+	margin-top: 4px;
+}
+
+.ne-date-pick-btn button {
+	border-color: #ffffff;
+}
+
+[datepicker-popup-wrap] table {
+	background-color: #ffffff;
+	outline: none;
+}
+
+[datepicker-popup-wrap] table .text-info {
+	color: #555555;
+}
+
+.pull-right > [datepicker-popup-wrap].dropdown-menu {
+	right: auto;
+	left: auto;
+}
+
+.dtpick-wrap.pull-right {
+	position: relative;
+}
+
+.service-list-btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+[type='checkbox'] {
+	cursor: pointer;
+}
+
+input.date-wrap-drop {
+	display: none;
+}
+
+@media screen and (min-width: 970px) {
+	input.date-wrap-drop {
+		width: 0;
+		padding: 0;
+		position: relative;
+		z-index: -9;
+		bottom: -5pt;
+		left: -50% !important;
+	}
+}
+
+/* machine add / edit */
+.client-branch {
+	padding: 0px 10px;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	margin-bottom: 14px;
+}
+
+.client-branch .warn-mode {
+	color: #777777;
+	font-family: Verdana, sans-serif;
+}
+
+.client-branch .warn-mode span {
+	color: #E94770;
+}
+
+#vendorDateColumn {
+	padding-top: 15px;
+}
+
+table.product-table tbody tr.selected-product {
+	background-color: #2C4178;
+	color: #ffffff;
+}
+
+.exportTableCompareSame tbody th {
+	width: 10%;
+}
+
+.commissionDetail thead tr th {
+	width: calc(100% / 15);
+}
+
+.commissionDetail .diffTable td {
+	width: calc(100% / 15);
+}
+
+.diffTable td {
+	width: 10%;
+}
+
+.diff-row th.negative {
+	color: #E94770
+}
+
+.compareChb {
+	margin: 20px;
+	margin-right: 5px;
+}
+
+.sales-radio-filter-area {
+}
+
+.sales-radio-filter-area label {
+	padding-left: 5px;
+	margin-left: 5px;
+}
+
+.warning {
+	color: #E94770;
+}
+
+.waring-area {
+	text-align: right;
+}
+
+.progress {
+	height: 28px;
+}
+
+.progress span {
+	font-size: 12px;
+	line-height: 28px;
+}
+
+button.darker {
+	color: #efefef;
+	background-color: #555555;
+	border: 1px;
+	border-color: #95a5a6;
+}
+
+.container {
+	min-width: 95%;
+}
+
+.clear {
+	clear: both;
+}
+
+.container.ng-scope {
+	width: 100% !important;
+	padding: 0px;
+	margin: 0px
+}
+
+.row {
+	margin-right: 0px;
+}
+
+.table > tbody > tr > td {
+	vertical-align: middle;
+	border-top: 1px solid #efefef;
+}
+
+.table thead tr {
+	background-color: #efefef;
+	padding: 8px 15px;
+	font-size: 1.2em;
+}
+
+.btn {
+	padding: 5px 8px;
+}
+
+button.glyphicon {
+	padding: 4px 7px;
+}
+
+.btn-default {
+	color: #555555;
+	background-color: #efefef;
+	border: 1px;
+	border-color: #95a5a6;
+}
+
+.btn {
+	padding: 10px 12px;
+}
+
+.noTopMargin {
+	margin-top: 0px;
+}
+
+.noBottomMargin {
+	margin-bottom: 0px;
+}
+
+.noPaddingLeft {
+	padding-left: 0px;
+}
+
+.noPaddingRight {
+	padding-right: 0px;
+}
+
+.noPadding {
+	padding: 0px;
+}
+
+.noPaddingBottom {
+	padding-bottom: 0px;
+}
+
+.paddingTop12px {
+	padding-top: 12px;
+}
+
+.paddingLeft25px {
+	padding-left: 25px;
+}
+
+.well-sm {
+	padding: 10px;
+	text-align: center;
+}
+
+.well-sm h3 {
+	text-transform: uppercase;
+	margin-bottom: 21px;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+h3.well.btn-link {
+	margin-bottom: 0px;
+}
+
+.noBorder {
+	border: none;
+}
+
+.list-group-item .col-md-3 {
+	width: 25%;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.accessToControl {
+	margin-left: 16px;
+	padding: 8px 0px 8px 17px;
+}
+
+.panel-heading h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 6px;
+}
+
+.blue {
+	color: #5FB2E4;
+}
+
+.grey {
+	color: #434348;
+}
+
+.#E94770 {
+	color: #E94770;
+}
+
+.green {
+	color: #287916;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.noBorder {
+	border: none;
+}
+
+.topBottomBorder {
+	border-top: 1px solid #efefef;
+	border-bottom: 2px solid #efefef;
+	padding: 25px 18px;
+}
+
+.borderTop {
+	border-top: 1px solid #000000 !important;
+}
+
+.smallType {
+	font-size: .9em;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.btnWrap {
+	white-space: normal;
+}
+
+.btnLeft {
+	text-align: left;
+}
+
+.smallFont {
+	font-size: .8em;
+}
+
+.clientName {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.lightGrey {
+	color: #898989;
+}
+
+.#E94770 {
+	color: #E94770;
+}
+
+.rightButtonColumn {
+	padding-top: 11px;
+}
+
+.rightButtonColumnShort {
+	padding-top: 5px;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.font8em {
+	font-size: .8em;
+}
+
+.paddingLeft {
+	padding-left: 15px;
+}
+
+.bandHeader {
+	background-color: #ecf0f1;
+	padding: 10px;
+	margin-top: -20px;
+	font-size: 19px;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+a:hover, .btn-link:hover {
+	text-decoration: none !important;
+}
+
+#searchColumn {
+	padding-top: 15px;
+}
+
+#searchColumnShort {
+	padding-top: 8px;
+}
+
+.width70 {
+	width: 70%;
+}
+
+.width60 {
+	width: 60%;
+}
+
+.width50 {
+	width: 50%;
+}
+
+.width45 {
+	width: 45%;
+}
+
+.width40 {
+	width: 40%;
+}
+
+.width30 {
+	width: 30%;
+}
+
+.width20 {
+	width: 20%;
+}
+
+.width15 {
+	width: 15%;
+}
+
+.width10 {
+	width: 10%;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.marginRight10 {
+	margin-right: 10px;
+}
+
+.paddingRight10 {
+	padding-right: 10px;
+}
+
+.paddingLeft20px {
+	padding-left: 20px;
+}
+
+.inlineDateButton {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 26px;
+	color: #2C4178;
+	margin-top: -35px;
+	margin-left: -20px;
+	background-color: #dddddd;
+	padding: 5px 8px;
+	margin-right: 5px;
+}
+
+#dateColumn {
+	padding-top: 5px;
+}
+
+.center {
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.row {
+	margin-left: 0px;
+}
+
+.dollarAmountRight {
+	float: right;
+}
+
+.dollarAmountNameLeft {
+	float: left;
+}
+
+table-borde#E94770 > thead > tr > th, .table-borde#E94770 > thead > tr > th, table-borde#E94770 > tbody > tr > th, .table-borde#E94770 > tbody > tr > th, table-borde#E94770 > tfoot > tr > th, .table-borde#E94770 > tfoot > tr > th, table-borde#E94770 > thead > tr > td, .table-borde#E94770 > thead > tr > td, table-borde#E94770 > tbody > tr > td, .table-borde#E94770 > tbody > tr > td, table-borde#E94770 > tfoot > tr > td, .table-borde#E94770 > tfoot > tr > td {
+	border-left: none;
+	border-right: none;
+}
+
+.#E94770RoundedSquare {
+	float: left;
+	padding: 10px 15px;
+	background-color: #cf2a27;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.orangeRoundedSquare {
+	float: left;
+	padding: 10px 15px;
+	background-color: #ff9900;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.yellowRoundedSquare {
+	float: left;
+	padding: 10px 15px;
+	background-color: #f1c232;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+/*#divChart { margin-top: -20px; }*/
+
+/* INVOICE ICONS */
+.invoiceClosed:before {
+	content: "\25cf";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1.5em;
+	color: #287916;
+	margin: 5px;
+}
+
+.invoiceOpen:before {
+	content: "\25cb";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1.5em;
+	color: #287916;
+	margin: 5px;
+}
+
+.invoiceLate:before {
+	content: "\25cf";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1.5em;
+	color: #bc0023;
+	margin: 5px;
+}
+
+.pastDue {
+	padding: 5px 7px;
+	background-color: #bc0023;
+	border-radius: 5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.incomplete {
+	padding: 5px 7px;
+	background-color: #efefef;
+	border-radius: 5px;
+	color: #bc0023;
+	font-weight: bold;
+	text-align: center;
+}
+
+.green {
+	color: #287916;
+}
+
+/* MACHINES */
+
+/*.machine-search-form { margin: 0 auto; border: 1px solid #dddddd; border-radius: 5px; padding: 20px 10px 10px 10px; }
+.machine-search-form input[type="text"] { width: 170px; }
+.machine-search-form select { width: 170px; height: 26px; }
+.machine-search-form .form-group { text-align: right; }*/
+.machine-search-results {
+	margin-top: 10px;
+}
+
+.machine-search-results table thead th {
+	text-transform: uppercase;
+}
+
+.checkbox16px {
+	width: 16px;
+	height: 16px;
+	margin-left: 4px !important;
+}
+
+/* DATE PICKER */
+#dateColumn .btn-default, ul.dropdown-menu.ng-pristine.ng-untouched.ng-valid.ng-scope.ng-valid-date-disabled .btn-default {
+	background-color: #ffffff;
+	color: #666666;
+}
+
+#dateColumn .btn-default:hover, ul.dropdown-menu.ng-pristine.ng-untouched.ng-valid.ng-scope.ng-valid-date-disabled .btn-default hover {
+	background-color: #e5e5e5;
+	color: #666666;
+}
+
+.sortArrow {
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+/* SALES STATUS */
+
+.invoiced:before {
+	content: "\25cf";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1em;
+	color: #cccccc;
+	margin: 5px;
+}
+
+/* closed */
+.complete:before {
+	content: "\25cf";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1em;
+	color: #287916;
+	margin: 5px;
+}
+
+.opened:before {
+	content: "\25cb";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1em;
+	color: #287916;
+	margin: 5px;
+}
+
+.late:before {
+	content: "\25cf";
+	font-family: "Glyphicons Halflings";
+	line-height: 1;
+	font-size: 1em;
+	color: #bc0023;
+	margin: 5px;
+}
+
+tr.sales-record-group-header {
+	background-color: #2C4178;
+	color: #ffffff;
+}
+
+tr.sales-record-group-header td:hover {
+	background-color: #2C4178 !important;
+}
+
+.sales-record-group-header.past-due {
+	background-color: #b80000;
+}
+
+.sales-record-group-header.past-due td:hover {
+	background-color: #b80000 !important;
+}
+
+.glyphicon-download-alt { font-size: .8em; margin-left: 20px; margin-top: -7px; }
+
+.total-discrepancy {
+	margin-top: 10px;
+	font-size: 21px;
+	color: #286090;
+}
+
+td.grouped-header {
+	background-color: #c6d6ed;
+	font-size: 21px
+}
+
+td.subtotal {
+	font-size: 14px;
+}
+
+td.sub-grouped-header {
+	background-color: #c2c9d4;
+	padding-left: 20px !important;
+	font-size: 18px
+}
+
+.sub-grouped-header:hover {
+	background-color: #c2c9d4 !important;
+}
+
+td.noBorderTop {
+	border-top: none !important;
+}
+
+tfoot th {
+	vertical-align: middle !important;
+}
+
+td.default-price {
+	color: green;
+}
+
+td.custom-price {
+	color: #E94770;
+}
+
+.btn-sm {
+	padding: 6px 9px
+}
+
+.modal-danger .modal-header {
+	color: #ffffff;
+	border-radius: 5px 5px 0 0;
+}
+
+.modal-danger .modal-header {
+	background: #d9534f;
+}
+
+td.past-due span {
+	background-color: #cf2a27;
+	border-radius: 3px;
+	padding: 2px 8px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+td.on-closed span {
+	background-color: #dddddd;
+	color: #cf2a27;
+}
+
+td.past-due span:empty {
+	display: none;
+}
+
+tr.border-top td {
+	border-top: 1px solid #000000 !important;
+	color: #E94770;
+	font-weight: bold;
+}
+
+tr.grand-total td {
+	background-color: #dddddd;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+@media print {
+	.noPrint { display: none; }
+
+	.panel-default { border: none; }
+
+	.panel { margin-bottom: 0px; border: none; box-shadow: none; }
+
+	table th { font-size: 12px; font-weight: bold; }
+
+	td.grouped-header { font-size: 14px; font-weight: bold; }
+
+	table td { font-size: 10px; }
+
+	th.changeRow { font-size: 10px; }
+
+	.panel-heading h3 { font-size: 16px; }
+
+	.panel-body { padding: 0px; }
+
+	td, tr, table.diffTable tbody tr { page-break-inside: avoid; }
+
+	table#exportTable tbody tr { page-break-inside: avoid; }
+
+	.modal { display: none; }
+
+	td.sub-grouped-header { font-size: 14px; font-weight: bold; }
+}
+
+input#payment-report + .dropdown-menu {
+	right: 0 !important;
+	left: auto !important;
+}
+
+.wide-load {
+	width: 100px;
+}
+
+.broker-grand-total td {
+	background-color: #ecf0f1 !important;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 8px 15px;
+}
+
+tr.brokerHeaderRow td {
+	background-color: #ecf0f1 !important;
+}
+
+.table-commission-report > tbody > tr:hover > td {
+	background-color: #e0e9f5;
+}
+
+.table-commission-report > tbody > tr.header-row > td, .table-commission-report > tbody > tr.header-row:hover > td {
+	background-color: #c6d6ed !important;
+}
+
+.table-commission-report > tbody > tr.compare-row > td {
+	border-top: 1px solid #2C4178 !important;
+	border-bottom: 4px double #2C4178 !important;
+}
+
+.table-commission-report > tfoot > tr > td {
+	border-top: 1px solid #2C4178 !important;
+	font-weight: bold;
+}
+
+.efn-select-modal table > tbody > tr {
+	cursor: pointer;
+}
+
+/* what a name... */
+.efn-commission-report-date-picker-display {
+	cursor: pointer;
+}
+
+.efn-commission-report-date-picker-display span {
+	font-weight: bold;
+	margin: 0 8px;
+}
+
+.efn-commission-report-filter-placeholder {
+	background: #ecf0f1;
+	width: 100%;
+	height: 43px;
+	border-radius: 4px;
+}
+
+table.table-payment-report > tbody > tr:hover > td {
+	background-color: inherit;
+}
+
+.lateFee {
+	position: relative;
+	display: inline-block;
+}
+
+.lateFee .lateFeePop {
+	visibility: hidden;
+	width:135px;
+	padding: 5px;
+	position: absolute;
+	z-index:1000;
+	color: #2C4178;
+	background-color: white;
+	border: 1px solid #2C4178;
+    font-weight: normal;
+}
+
+.lateFee:hover .lateFeePop {
+	visibility: visible;
+}
+
+.pastDueMachines {
+	position: relative;
+	display: inline-block;
+	color: #cf2a27;
+	text-decoration: underline;
+}
+
+.pastDueMachines th, .pastDueMachines td {
+	text-align:center;
+}
+
+.pastDueMachines .pastDueMachinesPop {
+	visibility: hidden;
+	width: 400px;
+	padding: 5px;
+	position: absolute;
+	right: 0px;
+	z-index:1000;
+	color: #2C4178;
+	background-color: white;
+	border: 1px solid #2C4178;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.pastDueMachines:hover .pastDueMachinesPop {
+	visibility: visible;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.alert {
+	margin-bottom: 8px;
+}
+
+.sales-green {
+	color: #00b233;
+}
+
+.sales-#E94770 {
+	color: #b80000;
+}
