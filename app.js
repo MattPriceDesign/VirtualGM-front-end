@@ -73,13 +73,29 @@ const app = Vue.createApp({
             insightContentFiveWeekSalesTrend: false, 
             insightContentFirstDraft: false,
             insightContentTaskCreationFlow: false,
+            insightHighShrinkMarket: false,
+            insightHighWasteMarket: false,
+            insightHighWasteVending: false,
+            insightLowSalesMarket: false,
+            insightLowSalesVending: false,
             taskShortcut: false,
 
 
             //Performance indicators drop down toggle 
             dropDownInventoryByBranchItem1: false,
             dropDownSalesByRouteItem1: false,
+            dropDownHighWasteRed: true,
+            dropDownHighWasteYellow: false,
+            dropDownHighWasteGreen: false,
+            dropDownLowSalesRed: true,
+            dropDownLowSalesYellow: false,
+            dropDownLowSalesGreen: false,
+            dropDownHighShrinkRed: true,
+            dropDownHighShrinkYellow: false,
+            dropDownHighShrinkGreen: false,
 
+
+            
             //date selection toggles 
             pillToggleDueDate: false,
             radioToggleUrgent: false,
@@ -279,6 +295,11 @@ const app = Vue.createApp({
             this.insightContentFiveWeekSalesTrend = false
             this.insightContentFirstDraft = false
             this.insightContentTaskCreationFlow = false
+            this.insightHighShrinkMarket = false
+            this.insightHighWasteMarket = false
+            this.insightHighWasteVending = false
+            this.insightLowSalesMarket = false
+            this.insightLowSalesVending = false
             this.taskShortcut = false
 
             //Closes expanded drop-down items
