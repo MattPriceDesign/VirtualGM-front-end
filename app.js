@@ -122,6 +122,17 @@ const app = Vue.createApp({
         window.removeEventListener("resize", this.resizeEventHandler);
     },
     mounted() { 
+                
+        let speedomteScript = document.createElement('script')
+        speedomteScript.setAttribute('src', 'https://www.mattprice.design/documents/speedometer.js')
+        document.body.appendChild(speedomteScript)
+        
+        let chartSettupScript = document.createElement('script')
+        chartSettupScript.setAttribute('src', 'https://www.mattprice.design/documents/chartssetup.js')
+        document.body.appendChild(chartSettupScript)
+
+
+
         // Gets window size to check what navigation bar style use.
         this.resizeEventHandler();
 
