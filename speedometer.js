@@ -109,12 +109,10 @@ const gaugeNeedle = {
     ctx.restore();
 
     //needle value text
-    ctx.font = '50px Roboto'
-    ctx.fillStyle = '#2C4178'
-    // ctx.fillText(needleValue, cx, cy + 60)
-    ctx.fillText(needleValue, cx, cy + thisHeight / 4)
-
-    ctx.textAlign = 'center'
+    // ctx.font = '50px Roboto'
+    // ctx.fillStyle = '#2C4178'
+    // ctx.fillText(needleValue, cx, cy + thisHeight / 4)
+    // ctx.textAlign = 'center'
   }
 }
 
