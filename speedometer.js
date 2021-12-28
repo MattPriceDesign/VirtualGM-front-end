@@ -6,16 +6,16 @@ var greenGradient = false;
 var grayGradient = false;
 const data = {
   datasets: [{
-    label: 'Weekly Sales',
+    label: 'Active bar graph',
     data: [30,30, 10, 20],
     backgroundColor: [
-      // working here
-      yellowGradient, yellowGradient, yellowGradient, '#F5F5F5',
+      // change colors of the speedometer bar
+      greenGradient, greenGradient, greenGradient, '#F5F5F5',
     ],
     borderColor: [
       '#fff',
     ],
-    // working here
+    // change what number the needle points to
     needleValue: 70,
     borderWidth: 1,
     borderRadius: 5,
@@ -78,7 +78,7 @@ const gaugeNeedle = {
     ctx.rotate(angle);
 
     ctx.beginPath();     
-    ctx.fillStyle = yellowNeedleGradient;                    
+    ctx.fillStyle = greenNeedleGradient;                    
     ctx.lineWidth = 5;
     ctx.moveTo(0, 10);// Create a starting point
     ctx.arcTo( //top left
@@ -167,10 +167,10 @@ function speedometerResize(){
 
 
 
-  // speedometerChart.data.datasets[0].backgroundColor[0] = redGradient;
-  speedometerChart.data.datasets[0].backgroundColor[0] = yellowGradient;
-  speedometerChart.data.datasets[0].backgroundColor[1] = yellowGradient;
-  speedometerChart.data.datasets[0].backgroundColor[2] = yellowGradient;
+  // change primary bar here;
+  speedometerChart.data.datasets[0].backgroundColor[0] = greenGradient;
+  speedometerChart.data.datasets[0].backgroundColor[1] = greenGradient;
+  speedometerChart.data.datasets[0].backgroundColor[2] = greenGradient;
   speedometerChart.data.datasets[1].backgroundColor[0] = grayGradient;
 
 
@@ -192,3 +192,4 @@ yellowNeedleGradient.addColorStop(1, '#FDD168');
 greenNeedleGradient = ctx.createLinearGradient(0, 0, thisHeight * .6, 0);
 greenNeedleGradient.addColorStop(0, '#2C4178');   
 greenNeedleGradient.addColorStop(1, '#4FB794');
+   
