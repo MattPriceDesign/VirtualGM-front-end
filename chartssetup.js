@@ -40,78 +40,33 @@ myGradeChartPreview.update();
 
 
 
-// 2. myGradeChartExpanded [grade card]
-// var gradeCanvasExpanded = document.getElementById("myGradeChartExpanded");
-// var gradientGrade = gradeCanvasExpanded.getContext('2d').createLinearGradient(0, 0, 0, 150);
-// gradientGrade.addColorStop(0, '#5FB2E4');
-// gradientGrade.addColorStop(1, '#2C4178');
-// var ctx = document.getElementById('myGradeChartExpanded').getContext("2d");
-// var myGradeChartExpanded = new Chart(ctx, {
-//     type: 'doughnut',
-//     responsive: true,
-//     responsiveAnimationDuration: 2000,
-//     data: {
-//         labels: [
-//             'Money earned', 'Money not earned'
-//         ],
-//         datasets: [
-//             {
-//                 label: 'Dataset 1',
-//                 data: [
-//                     90, 10
-//                 ],
-//                 backgroundColor: [gradientGrade, '#F5F5F5']
-//             }
-//         ],
-//         options: {
-//             responsive: true,
-//             plugins: {
-//                 // legend: {
-//                 //     display: 'false',
-//                 //     position: 'top'
-//                 // },
-//                 title: {
-//                     display: true,
-//                     text: 'Chart.js Doughnut Chart'
-//                 }
-//             }
-//         }
-//     }
-// })
-// myGradeChartExpanded.options.def
-// myGradeChartExpanded.options.plugins.legend.display = false;
-// myGradeChartExpanded.options.cutoutPercentage = 88;
-// myGradeChartExpanded.update();
-
-
-
 // Area charts
 Chart.defaults.font.size = 14;
 Chart.defaults.color = "#757575";
 
 
 let gradientBgBlue = ctx.createLinearGradient(0, 0, 0, 400);
-gradientBgBlue.addColorStop(0, '#7BC0E9');
-gradientBgBlue.addColorStop(1, '#CFE8F7');
+gradientBgBlue.addColorStop(0, '#fff');
+gradientBgBlue.addColorStop(1, '#DBEEF9');
 
 let gradientBgGreen = ctx.createLinearGradient(0, 0, 0, 400);
-gradientBgGreen.addColorStop(0, '#7BC9AF');
-gradientBgGreen.addColorStop(1, '#CAE9DF');
+gradientBgGreen.addColorStop(0, '#fff');
+gradientBgGreen.addColorStop(1, '#EAF6F2');
 
 let gradientBgYellow = ctx.createLinearGradient(0, 0, 0, 400);
-gradientBgYellow.addColorStop(0, '#FED571');
-gradientBgYellow.addColorStop(1, '#FEEDC5');
+gradientBgYellow.addColorStop(0, '#fff');
+gradientBgYellow.addColorStop(1, '#FFF4D9');
 
 let gradientBgRed = ctx.createLinearGradient(0, 0, 0, 400);
-gradientBgRed.addColorStop(0, '#EF7A97');
-gradientBgRed.addColorStop(1, '#FCEDF1');
+gradientBgRed.addColorStop(0, '#fff');
+gradientBgRed.addColorStop(1, '#F3DBE1');
 
 let gradientBgPurple = ctx.createLinearGradient(0, 0, 0, 400);
-gradientBgPurple.addColorStop(0, '#DFB2DF');
-gradientBgPurple.addColorStop(1, '#E4BFE4');
+gradientBgPurple.addColorStop(0, '#F7ECF7');
+gradientBgPurple.addColorStop(1, '#EACEEA');
 
 let chartLineBlue = "#5FB2E4";
-let chartLineRed = "#F47A99";
+let chartLineRed = "#E94770";
 let chartLineYellow = "#FDD168";
 let chartLineGreen = "#4FB794";
 let chartLinePurple = "#B54FB7";
@@ -484,7 +439,7 @@ const myFiveWeekSalesTrendData = {
             borderColor: chartLineBlue,
             /* borderColor: '#5FB2E4', */
             pointBorderColor: chartLineBlue,
-            borderWidth: 2,
+            pointBorderWidth: 1,
             pointRadius: 3,
             data: [
                 110,
@@ -621,7 +576,8 @@ const myFiveWeekSalesTrendOptionsP = {
     elements: {
         line: {
             fill: true,
-            tension: .35
+            tension: 0,
+            borderWidth: 5, 
         }
     }
 };
