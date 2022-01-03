@@ -751,3 +751,466 @@ $(document).ready(function () {
 }); 
 
 
+
+// 3. myPreviewChart [insight preview card] - Not working with chartjs v3
+// var ctx = document.getElementById('myPreviewChart').getContext("2d");
+// var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+// gradientStroke.addColorStop(0, '#80b6f4');
+// gradientStroke.addColorStop(1, '#f49080');
+// var gradientFillCurrent = ctx.createLinearGradient(00, 0, 0, 200);
+// gradientFillCurrent.addColorStop(0, "rgba(95,178,228,0.9)");
+// gradientFillCurrent.addColorStop(1, "rgba(161,205,232, 0.7)");
+// var gradientFillPrevious = ctx.createLinearGradient(00, 0, 0, 200);
+// gradientFillPrevious.addColorStop(0, "rgba(175,222,206,0.3)");
+// gradientFillPrevious.addColorStop(1, "rgba(79,183,148,0.2)");
+// var ctx = document.getElementById('myPreviewChart').getContext('2d');
+// var myPreviewChart = new Chart(ctx, {
+//     type: 'line',
+//     responsive: true,
+//     responsiveAnimationDuration: 2000,
+//     data: {
+//         labels: [
+//             'Feb 27',
+//             'Feb 20',
+//             'Feb 13',
+//             'Feb 6',
+//             'Jan 30',
+//             'Jan 23',
+//             'Jan 16',
+//             'Jan 9',
+//             'Jan 2',
+//             'Dec 26',
+//             'Dec 19',
+//         ],
+//         datasets: [
+//             {
+//                 label: 'This month',
+//                 backgroundColor: gradientFillCurrent,
+//                 hoverBackgroundColor: [
+//                     '#2C4178',
+//                 ],
+//                 // pointBorderColor: '#5FB2E4',
+//                 // pointBackgroundColor: '#5FB2E4',
+//                 // borderColor: '#5FB2E4',
+//                 // pointStrokeColor: "#FDD168",
+//                 // pointHoverBorderWidth: 3,
+//                 // pointRadius: 3,
+//                 // borderWidth: 4,
+//                 pointStrokeColor: "#FDD168",
+//                 highli: 10,
+//                 borderWidth: 2,
+//                 pointRadius: 3,
+//                 borderColor: "#5FB2E4",
+//                 data: [
+//                     3,
+//                     2,
+//                     5,
+//                     2,
+//                     3,
+//                     3,
+//                     5,
+//                     3,
+//                     3,
+//                     3,
+//                     2,
+//                     4
+//                 ]
+//             }, {
+//                 label: 'Last month',
+//                 data: [
+//                     4,
+//                     3,
+//                     1,
+//                     3,
+//                     3,
+//                     4,
+//                     1,
+//                     2,
+//                     5,
+//                     3,
+//                     6
+//                 ],
+//                 backgroundColor: gradientFillPrevious,
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#C7EBDF',
+//                 pointBackgroundColor: '#C7EBDF',
+//                 borderColor: '#C7EBDF'
+//             }
+//         ]
+//     },
+//     options: {
+//         title: {
+//             display: false
+//         },
+//         tooltips: {
+//             mode: 'index',
+//             intersect: false,
+//             position: 'nearest',
+//             backgroundColor: '#2C4178',
+//             xPadding: 16,
+//             yPadding: 12,
+//             borderColor: '#fff',
+//             borderWidth: 2,
+//             titleMarginBottom: 8,
+//             titleFontFamily: "'Roboto', sans-serif",
+//             titleFontSize: 16,
+//             bodySpacing: 6,
+//             bodyFontFamily: "'Montserrat', sans-serif"
+//         },
+//         hover: {
+//             mode: 'nearest',
+//             intersect: true
+//         },
+//         scales: {
+//             xAxes: [
+//                 {
+//                     gridLines: {
+//                         display: true
+//                     },
+//                     ticks: {}
+//                 }
+//             ],
+//             yAxes: [
+//                 {
+//                     scaleLabel: {
+//                         padding: 10
+//                     },
+//                     gridLines: {
+//                         display: true,
+//                         color: '#F8F8F8'
+//                     },
+//                     ticks: {
+//                         beginAtZero: true,
+//                         padding: 0
+//                     }
+//                 }
+//             ]
+//         }
+
+//     }
+// });
+// // chart.options.title.text = 'inside a function new title';
+// //  Chart.options.hover.intersect = false;
+// myPreviewChart.options.plugins.legend.display = false;
+// // Chart.defaults.global.defaultFontColor = 'rgba(44,65,120,0.3)';
+// myPreviewChart.update()
+
+
+// 4. myExpandedChart [insight card]
+// var ctx = document.getElementById('myExpandedChart').getContext("2d");
+// var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+// gradientStroke.addColorStop(0, '#80b6f4');
+// gradientStroke.addColorStop(1, '#f49080');
+// var gradientFillCurrent = ctx.createLinearGradient(00, 0, 0, 200);
+// gradientFillCurrent.addColorStop(0, "rgba(95,178,228,0.9)");
+// gradientFillCurrent.addColorStop(1, "rgba(161,205,232, 0.7)");
+// var gradientFillPrevious = ctx.createLinearGradient(00, 0, 0, 200);
+// gradientFillPrevious.addColorStop(0, "rgba(175,222,206,0.3)");
+// gradientFillPrevious.addColorStop(1, "rgba(79,183,148,0.2)");
+// var ctx = document.getElementById('myExpandedChart').getContext('2d');
+// var myExpandedChart = new Chart(ctx, {
+//     type: 'line',
+//     responsive: true,
+//     responsiveAnimationDuration: 2000,
+//     data: {
+//         labels: [
+//             'Feb 27',
+//             'Feb 20',
+//             'Feb 13',
+//             'Feb 6',
+//             'Jan 30',
+//             'Jan 23',
+//             'Jan 16',
+//             'Jan 9',
+//             'Jan 2',
+//             'Dec 26',
+//             'Dec 19',
+//         ],
+//         datasets: [
+//             {
+//                 label: 'This month',
+//                 backgroundColor: gradientFillCurrent,
+//                 hoverBackgroundColor: [
+//                     '#2C4178',
+//                 ],
+//                 // pointBorderColor: '#5FB2E4',
+//                 // pointBackgroundColor: '#5FB2E4',
+//                 // borderColor: '#5FB2E4',
+//                 // pointStrokeColor: "#FDD168",
+//                 // pointHoverBorderWidth: 3,
+//                 // pointRadius: 3,
+//                 // borderWidth: 4,
+//                 pointStrokeColor: "#FDD168",
+//                 highli: 10,
+//                 borderWidth: 2,
+//                 pointRadius: 3,
+//                 borderColor: "#5FB2E4",
+//                 data: [
+//                     3,
+//                     2,
+//                     5,
+//                     2,
+//                     3,
+//                     3,
+//                     5,
+//                     3,
+//                     3,
+//                     3,
+//                     2,
+//                     4
+//                 ]
+//             }, {
+//                 label: 'Last month',
+//                 data: [
+//                     4,
+//                     3,
+//                     1,
+//                     3,
+//                     3,
+//                     4,
+//                     1,
+//                     2,
+//                     5,
+//                     3,
+//                     6
+//                 ],
+//                 backgroundColor: gradientFillPrevious,
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#C7EBDF',
+//                 pointBackgroundColor: '#C7EBDF',
+//                 borderColor: '#C7EBDF'
+//             }
+//         ]
+//     },
+//     options: {
+//         title: {
+//             display: false
+//         },
+//         legend: {
+//             display: true,
+//             fontColor: '#F8F8F8'
+//         },
+//         tooltips: {
+//             mode: 'index',
+//             intersect: false,
+//             position: 'nearest',
+//             backgroundColor: '#2C4178',
+//             xPadding: 16,
+//             yPadding: 12,
+//             borderColor: '#fff',
+//             borderWidth: 2,
+//             titleMarginBottom: 8,
+//             titleFontFamily: "'Roboto', sans-serif",
+//             titleFontSize: 16,
+//             bodySpacing: 6,
+//             bodyFontFamily: "'Montserrat', sans-serif"
+//         },
+//         hover: {
+//             mode: 'nearest',
+//             intersect: true
+//         },
+//         scales: {
+//             xAxes: [
+//                 {
+//                     gridLines: {
+//                         display: true
+//                     },
+//                     ticks: {}
+//                 }
+//             ],
+//             yAxes: [
+//                 {
+//                     scaleLabel: {
+//                         padding: 10
+//                     },
+//                     gridLines: {
+//                         display: true,
+//                         color: '#F8F8F8'
+//                     },
+//                     ticks: {
+//                         beginAtZero: true,
+//                         padding: 0
+//                     }
+//                 }
+//             ]
+//         }
+
+//     }
+// });
+// // chart.options.title.text = 'inside a function new title';
+// // Chart.options.legend.display = false;
+// // Chart.options.hover.intersect = false;
+// Chart.defaults.global.defaultFontColor = 'rgba(44,65,120,0.3)';
+
+// 5. myFiveWeekSalesTrendChartE [insight card]
+// var fiveWeekTrendExpanded = document.getElementById("myFiveWeekSalesTrendChartE");
+// var ctx = document.getElementById('myFiveWeekSalesTrendChartE').getContext("2d");
+// var myFiveWeekSalesTrendChartE = new Chart(ctx, {
+//     var myFiveWeekSalesTrendChartE = new Chart(ctx, 
+
+// const ctx = document.getElementById('chart_0');
+// const myFiveWeekSalesTrendData = {
+//         labels: [
+//         'Feb 2',
+//         'Feb 22',
+//         'Feb 29',
+//         'Mar 6',
+//         'Mar 13'
+//         ],
+//         datasets: [
+//         {
+//                 label: 'Other Sales',
+//                 backgroundColor: 'rgba(181, 79, 183, .1)',
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#B54FB7',
+//                 pointBackgroundColor: '#B54FB7',
+//                 borderColor: '#B54FB7',
+//                 data: [
+//                     3,
+//                     4,
+//                     2,
+//                     2,
+//                     2,
+//                 ],
+//                 // fill: true
+//             },
+//             {
+//                 label: 'OCS Billing Sales',
+//                 backgroundColor: 'rgba(233, 71, 112, .1)',
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#E94770',
+//                 pointBackgroundColor: '#E94770',
+//                 borderColor: '#E94770',
+//                 data: [
+//                     5,
+//                     4,
+//                     5,
+//                     7,
+//                     7,
+//                 ],
+//             }, 
+//             {
+//                 label: 'Cafeteria Sales',
+//                 backgroundColor: '#FEE09803',
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#FDD168',
+//                 pointBackgroundColor: '#FDD168',
+//                 borderColor: '#FDD168',
+//                 data: [
+//                     18,
+//                     26,
+//                     27,
+//                     10,
+//                     11,
+//                 ],
+//             },     
+//             {
+//                 label: 'Vending Sales',
+//                 backgroundColor: '#A8DBCA03',
+//                 pointBorderWidth: 1,
+//                 pointHoverRadius: 1,
+//                 pointHoverBorderWidth: 1,
+//                 pointRadius: 3,
+//                 pointBorderColor: '#4FB794',
+//                 pointBackgroundColor: '#4FB794',
+//                 borderColor: '#4FB794',
+//                 data: [
+//                     50,
+//                     55,
+//                     73,
+//                     68,
+//                     48,
+//                 ],
+//             },                   
+//             {
+//                 label: 'Micro Market Sales',
+//                 backgroundColor: 'rgba(95, 178, 228, 0.1)',
+//                 hoverBackgroundColor: [
+//                     '#5FB2E4',
+//                 ],
+//                 pointStrokeColor: "#5FB2E4",
+//                 highli: 10,
+//                 borderWidth: 2,
+//                 pointRadius: 3,
+//                 borderColor: "#5FB2E4",
+//                 data: [
+//                     110,
+//                     138,
+//                     87,
+//                     156,
+//                     95
+//                 ],
+//             },
+//         ]
+// };
+// const myFiveWeekSalesTrendOptions = {
+//     layout: {
+//         padding: {
+//             left: 0,
+//         },
+//     },
+//     plugins: {
+//         legend: {
+//             display: false,
+//             position: 'bottom'
+//         },
+//         responsive: true,
+//         title: {
+//             display: true,
+//             text: "Income Year by Year - Stacked Area"
+//         },
+//     },
+//     tooltips: {
+//         mode: 'nearest'
+
+//     },
+//     scales: {
+//         y: {
+//             stacked: true,
+//             grid: {
+//                 tickColor: 'Green'
+//             },
+//             ticks: {
+//                 // Include a dollar sign in the ticks
+//                 callback: function(value, index, values) {
+//                     return '$' + value + 'k     ';
+//                 }
+//             },
+//         },
+//         x: {
+
+//             grid: {
+//                 tickColor: 'Blue'
+//             },
+//         }
+//     },
+//     elements: {
+//         line: {
+//           fill: true,
+//           tension: .35,
+//         }
+//     }
+// }
+
+// const myFiveWeekSalesTrendChartE = new Chart (ctx, {
+//     type: 'line',
+//     data: myFiveWeekSalesTrendData,
+//     options: myFiveWeekSalesTrendOptions,
+// }); 
+
+
