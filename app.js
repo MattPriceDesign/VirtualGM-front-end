@@ -133,38 +133,33 @@ const app = Vue.createApp({
 
 
 
-        // Gets window size to check what navigation bar style use.
-        this.resizeEventHandler();
+        // page dependent code
+        if(pageName == "home") {
+            // Gets window size to check what navigation bar style use.
+            this.resizeEventHandler();
+            //Task overview script
+            const r = document.querySelector(':root');
+            // Task overview list
+            let OverviewListHeight = (document.getElementById("TaskOverviewList").scrollHeight)
+            document.documentElement.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
 
-        // uncomment this in the home page
-        // const picker = new Litepicker({ 
-        //     element: document.getElementById('picker'),
-        //     singleMode: true,
-        //     format: 'MMMM D, YYYY',
-        //       firstDay: 0
-        // });
-        //Task overview script
-        const r = document.querySelector(':root');
-        // Task overview list
-        let OverviewListHeight = (document.getElementById("TaskOverviewList").scrollHeight)
-        // r.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
-        document.documentElement.style.setProperty('--branchListContainerMaxHeight', OverviewListHeight + 'px');
+            // Inactive categories list
+            let CategoryListHeight = (document.getElementById("TaskCategoryList").scrollHeight)
+            document.documentElement.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
+            console.log("home page code ran")
 
-        // Inactive categories list
-        let CategoryListHeight = (document.getElementById("TaskCategoryList").scrollHeight)
-        // r.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
-        document.documentElement.style.setProperty('--CategoryListMaxHeight', CategoryListHeight + 'px');
+        }else if(pageName == "search") { 
+            const picker = new Litepicker({ 
+                element: document.getElementById('picker'),
+                singleMode: false,
+                format: 'MMMM D, YYYY',
+                  firstDay: 0
+            });
+            console.log("search page code ran")
+        } else {
+            console.log("This is not the home or search page.")
+        }
 
-
-
-
-        // uncomment this in the search page
-          const picker = new Litepicker({ 
-            element: document.getElementById('picker'),
-            singleMode: false,
-            format: 'MMMM D, YYYY',
-              firstDay: 0
-        });
 
     },
     methods: {
