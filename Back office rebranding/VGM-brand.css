@@ -10,6 +10,24 @@
   --subdued: #606A85;    
   
 }
+/*Scrollbar*/
+
+html {
+  --thumbBG: #A1ACCA;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+body {
+  scrollbar-width: auto;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 /* nav bar position */
 body > div.container > div > div.ng-scope {
 position: sticky;
